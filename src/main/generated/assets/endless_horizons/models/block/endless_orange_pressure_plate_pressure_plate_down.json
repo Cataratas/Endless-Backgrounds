@@ -1,0 +1,7 @@
+{
+  "parent": "endless_horizons:block/template_pressure_plate_down",
+  "textures": {
+    "all": "endless_horizons:block/endless_orange",
+    "particle": "endless_horizons:block/endless_orange"
+  }
+}

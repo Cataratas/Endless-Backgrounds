@@ -1,0 +1,7 @@
+{
+  "parent": "endless_horizons:block/template_pressure_plate",
+  "textures": {
+    "all": "endless_horizons:block/endless_gray",
+    "particle": "endless_horizons:block/endless_gray"
+  }
+}

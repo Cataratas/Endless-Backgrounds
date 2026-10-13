@@ -11,17 +11,17 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static net.endless_horizons.blocks.Blocks.NO_OUTLINE;
+import static net.endless_horizons.blocks.EndlessBlocks.NO_OUTLINE;
 
 @Mixin(GameRenderer.class)
 public class NoOutline {
     @Final
     @Shadow
-    MinecraftClient client;
+    private MinecraftClient client;
 
     @Inject(method = "shouldRenderBlockOutline", at = @At(value = "HEAD", target = "Lnet/minecraft/client/render/GameRenderer;shouldRenderBlockOutline()Z"), cancellable = true)
     public void shouldRenderBlockOutline(CallbackInfoReturnable<Boolean> cir) {
-        assert this.client.targetedEntity == client.player;
+
         HitResult hitResult = this.client.crosshairTarget;
         if (hitResult != null && this.client.world != null && hitResult.getType() == HitResult.Type.BLOCK) {
             if (this.client.world.getBlockState(((BlockHitResult) hitResult).getBlockPos()).isIn(NO_OUTLINE)) {

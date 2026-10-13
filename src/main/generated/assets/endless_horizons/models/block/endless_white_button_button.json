@@ -1,0 +1,7 @@
+{
+  "parent": "endless_horizons:block/template_button",
+  "textures": {
+    "all": "endless_horizons:block/endless_white",
+    "particle": "endless_horizons:block/endless_white"
+  }
+}

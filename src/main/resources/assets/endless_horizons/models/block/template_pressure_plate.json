@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:block/pressure_plate_up",
+  "ambientocclusion": false,
+  "elements": [
+    {
+      "from": [1, 0, 1],
+      "to": [15, 1, 15],
+      "shade": false,
+      "faces": {
+        "down": {
+          "texture": "#all", "cullface": "down"},
+        "up": {"texture": "#all"},
+        "north": {"texture": "#all"},
+        "south": {"texture": "#all"},
+        "west": {"texture": "#all"},
+        "east": {"texture": "#all"
+        }
+      }
+    }
+  ]
+}

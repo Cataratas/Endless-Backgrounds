@@ -1,0 +1,7 @@
+{
+  "parent": "endless_horizons:block/template_door_top_right",
+  "textures": {
+    "all": "endless_horizons:block/endless_lime",
+    "particle": "endless_horizons:block/endless_lime"
+  }
+}

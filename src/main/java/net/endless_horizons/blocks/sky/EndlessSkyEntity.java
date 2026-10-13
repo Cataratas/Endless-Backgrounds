@@ -19,8 +19,7 @@ public class EndlessSkyEntity extends BlockEntity implements EndlessEntity {
 
     @Override
     public boolean shouldDrawSide(Direction direction) {
-        BlockPos.Mutable mutable = getPos().mutableCopy();
-        mutable.set(pos, direction);
-        return Block.shouldDrawSide(getCachedState(), Objects.requireNonNull(getWorld()), getPos(), direction, mutable);
+        BlockPos neighborPos = getPos().offset(direction);
+        return Block.shouldDrawSide(getCachedState(), Objects.requireNonNull(getWorld()).getBlockState(neighborPos), direction);
     }
 }

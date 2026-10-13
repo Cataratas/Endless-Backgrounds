@@ -1,0 +1,7 @@
+{
+  "parent": "endless_horizons:block/template_door_bottom_left",
+  "textures": {
+    "all": "endless_horizons:block/endless_black",
+    "particle": "endless_horizons:block/endless_black"
+  }
+}
